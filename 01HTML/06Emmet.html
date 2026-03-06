@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 자식 요소 선택 : '>' -->
+    <!-- div>ul>li -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div>
+        <p>
+        <ul>
+            <li></li>
+        </ul>
+        </p>
+    </div>
+
+    <!-- 형제노드 : '+' -->
+    <!-- div>ol>ul -->
+    <div>
+        <ol></ol>
+        <ul></ul>
+    </div>
+
+    <div>
+        <p><span></span></p>
+    </div>
+
+    <!-- div>ul>li>a+ul -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <ul></ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 상위태그 이동 : '^' -->
+    <!-- div>ul>li^p -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+        <p></p>
+    </div>
+
+    <!-- nav 메뉴구조만들기 -->
+    <!-- 기본구조만들기 -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr/>
+
+    <!--  -->
+    <div>
+        <ul>
+            <li>
+                <a href="">1.MAINMANU</a>
+                <ul>
+                    <li><a href="">1.SUBMANU</a></li>
+                    <li><a href="">2.SUBMANU</a></li>
+                    <li><a href="">3.SUBMANU</a></li>
+                    <li><a href="">4.SUBMANU</a></li>
+                    <li><a href="">5.SUBMANU</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">2.MAINMANU</a>
+                <ul>
+                    <li><a href="">1.SUBMANU</a></li>
+                    <li><a href="">2.SUBMANU</a></li>
+                    <li><a href="">3.SUBMANU</a></li>
+                    <li><a href="">4.SUBMANU</a></li>
+                    <li><a href="">5.SUBMANU</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">3.MAINMANU</a>
+                <ul>
+                    <li><a href="">1.SUBMANU</a></li>
+                    <li><a href="">2.SUBMANU</a></li>
+                    <li><a href="">3.SUBMANU</a></li>
+                    <li><a href="">4.SUBMANU</a></li>
+                    <li><a href="">5.SUBMANU</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">4.MAINMANU</a>
+                <ul>
+                    <li><a href="">1.SUBMANU</a></li>
+                    <li><a href="">2.SUBMANU</a></li>
+                    <li><a href="">3.SUBMANU</a></li>
+                    <li><a href="">4.SUBMANU</a></li>
+                    <li><a href="">5.SUBMANU</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 클래스 선택자 : '.' -->
+    <div class="c1"></div>
+    <div class="abc"></div>
+
+    <!-- ID선택자 : # -->
+    <div id="wrapper"></div>
+    <div id="id2"></div>
+
+    <!-- 속성 : [] -->
+    
+    <ol type="I">
+        <li>TEST_1</li>
+        <li>TEST_2</li>
+        <li>TEST_3</li>
+        <li>TEST_4</li>
+    </ol>
+
+
+    <!-- .wrapper>header>.top-header+nav^main>section^footer -->
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav></nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
