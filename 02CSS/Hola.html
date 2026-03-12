@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            padding: 0%;
+            margin: 0%;
+        }
+        .layout-1281{
+            width: 1281px;
+            margin: 0 auto;
+        }
+        .wrapper>header>nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 85px;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1281px;
+            margin: 0 auto
+        }
+        .wrapper>header>nav>.nav-bar>img{
+            width: 105px;
+            height: auto;
+            cursor: pointer;
+         }
+        .wrapper>header>nav>.nav-bar{
+           display: flex;
+           gap:25px;
+           align-items: center;
+        }
+        .wrapper>header>nav>.sub-manu{
+                display: flex;
+        }
+        .wrapper>header>nav>.sub-manu>.team{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-direction: row;
+        }
+        .wrapper>header>nav>.sub-manu>.team>.nav-team{
+            color: #fff;
+            background-color: #81e1cf;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 8px 22px;
+            border-radius: 36px;
+            height: 42px;
+            border: none;
+        }
+        .wrapper>header>nav>.sub-manu>.team>a{
+            border: 1px solid #dddddd;
+            color: #333;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 8px 22px;
+            border-radius: 36px;
+            height: 42px;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper>header>nav>.sub-manu>div>.login{
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #000;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+        }
+        .wrapper>main>section>.banner{
+            margin-bottom: 100px;
+        }
+        .wrapper>main>section>.banner>img{
+            width:100%;
+            height: auto;
+            border-radius: 16px;
+        }
+        .wrapper>main>section>.title{
+            display: flex;
+            justify-content: space-between;
+        }
+        .wrapper>main>section>.title>.title-font{
+            color: #000;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -.78px;
+            margin: 0 0 24px;
+        }
+        .wrapper>main>section>.title>.arrow-icon{
+            display: flex;
+            width:30px;
+            height:30px;
+            margin-right: 40px;
+            gap: 5px;
+        }
+        .wrapper>main>section>.slide{
+            width:100%;
+            background-color: lightgray;
+            border-radius: 25px;
+            height: 195px;
+            
+        }
+        .wrapper>main>section>.slide>div{
+
+        }
+        .wrapper>main>.container>.category{
+            margin:56px;
+            padding: 20px;
+        }
+        .wrapper>main>.container>.category>ul{
+            color: #868e96;
+            display: flex;
+            font-weight: 700;
+            font-size: 24px;
+            cursor: pointer;
+            gap:20px;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper>main>.container>.category>ul>li{
+            
+        }
+        .wrapper>footer{
+            
+            height: 180px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .wrapper>footer>.source{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            width:30%;
+            
+        }
+        .wrapper>footer>.source>img{
+            display: block;
+            width: 60px;
+            height: 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 32px;
+        }
+        .wrapper>footer>.source>.firstline{
+            display: flex;
+            gap:5px;
+            margin: 0%;
+            padding: 0%;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: -.2px;
+            color: #777;
+            
+        }
+        .wrapper>footer>.source>.secondline{
+            padding: 0%;
+            display: inline;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: -.2px;
+            color: #777;
+        }
+        .wrapper>footer>.intro{
+            display: flex;
+            gap: 50px;
+            color: #2f2f2f;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <div class="nav-bar ">
+                    <img src="https://holaworld.io/logo/default-logo.png" alt="logo">
+                    <div class="sub-title">Alla-IT</div>
+                </div>
+                <div class="sub-manu">
+                    <div class="team">
+                        <button class="nav-team">팀원 모집하기</button>
+                        <a href="javascript:void(o)">비즈니스 문의</a>
+                        <button class="login">로그인</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="layout-1281">
+                <div class="banner">
+                    <img src="https://hola-post-image.s3.ap-northeast-2.amazonaws.com/ad/hola-event_2024-08-12_22-03-40.png" alt="">
+                </div>
+                <div class="title">
+                    <div class="title-font">이번 주 올라 인기글</div>
+                    <dlv class="arrow-icon">
+                        <img src="https://holaworld.io/images/info/left-arrow-button.png" alt="">
+                        <img src="https://holaworld.io/images/info/right-arrow-button.png" alt="">
+                    </dlv>
+                </div>
+                <div class="slide">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+            <section class="container layout-1281">
+                <div class="category">
+                    <ul >
+                        <div class="category1">전체</div>
+                        <div class="category2">프로젝트</div>
+                        <div class="category3">스터디</div>
+                    </ul>
+                    <div>
+                        <div class="select1">기술 스택</div>
+                        <div class="select2">포지션</div>
+                        <div class="select3">진행 방식</div>
+                        <div class="select4">내 북마크 보기</div>
+                        <div class="select5">모집 중만 보기</div>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <span></span>
+                    </div>
+                </div>
+                <ul></ul>
+                <div></div>
+            </section>
+        </main>
+        <footer>
+            <div class="source">
+                <img src="https://holaworld.io/logo/default-logo.png" alt="logo">
+                <ul class="firstline">
+                    <div>Contact</div>
+                    <div>team.hola.official@gmail.com</div>
+                </ul>
+                <ul class="secondline">
+                    <div>Copyright Hola. All rights reserved</div>
+                </ul>
+            </div>
+            <div class="intro">
+                <a href="javascript:void(o)">이용약관</a>
+                <a href="javascript:void(o)">개인정보처리방침</a>
+                <a href="javascript:void(o)">서비스소개</a>
+                <a href="javascript:void(o)">광고상품 소개</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
