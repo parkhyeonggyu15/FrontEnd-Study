@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,62 +21,62 @@
         //--------------------
         // 전역 스코프
         //--------------------
-        // var g_val = "전역변수 확인!";
+        var g_val = "전역변수 확인!";
 
-        // function a(){
-        //     console.log('a func()..',g_val);
-        // }
-        // a();
-        // if(true){
-        //     console.log('if..',g_val);
-        // }
-        // console.log({key1:g_val});
+        function a(){
+            console.log('a func()..',g_val);
+        }
+        a();
+        if(true){
+            console.log('if..',g_val);
+        }
+        console.log({key1:g_val});
 
 
         //--------------------
         // 함수 스코프(함수내에서만 사용되는 변수범위, 만약 함수범위아니면 전역스코프,var 에 적용)
         //--------------------
 
-        // function a (){
-        //     var n1 = 10;
-        //     console.log("n1",n1);
-        // }
-        // a();
-        // console.log(n1);
+        function a (){
+            var n1 = 10;
+            console.log("n1",n1);
+        }
+        a();
+        console.log(n1);
 
         // 함수스코프영역이 아니라면 var는 전역스코프로 적용됨
-        // for(var i = 0;i<3;i++){
-        //     console.log("i",i);
-        // }
-        // console.log('end i : ',i);  
+        for(var i = 0;i<3;i++){
+            console.log("i",i);
+        }
+        console.log('end i : ',i);  
         
-        //--------------------
+        --------------------
         // 블록스코프( {} 내에서만 유효한 범위)
-        //--------------------
-        // if(true){
-        //     let v_1 = "블럭 내에 사용되는 지역변수"
-        //     console.log('v_1',v_1);
-        //     var v_2 = "블럭 내에 사용한 var변수"
-        // }
-        // console.log('v_2',v_2);
-        // console.log('v_1',v_1);
+        --------------------
+        if(true){
+            let v_1 = "블럭 내에 사용되는 지역변수"
+            console.log('v_1',v_1);
+            var v_2 = "블럭 내에 사용한 var변수"
+        }
+        console.log('v_2',v_2);
+        console.log('v_1',v_1);
         
         //--------------------
         // 렉시컬스코프
         //--------------------
-        // const name = "Global Scope";
+        const name = "Global Scope";
 
-        // function outer(){
-        //     const name = "Outer Local Scope";
+        function outer(){
+            const name = "Outer Local Scope";
 
-        //     function inner(){
-        //         const name = "Inner Local Scope";
-        //         console.log(name);
-        //     }
-        //     inner();
-        // }
+            function inner(){
+                const name = "Inner Local Scope";
+                console.log(name);
+            }
+            inner();
+        }
 
-        // outer();
+        outer();
         
         window.name='홍홍홍';
         const a= {
@@ -84,11 +84,11 @@
             age : 55,
             addr : "대구",
             talk : function(){
-                // console.log(`${this.name} 님이 말합니다`); //function's this : 호출 당시를 기준
+                console.log(`${this.name} 님이 말합니다`); //function's this : 호출 당시를 기준
                 console.log(this);
             },
             walk : ()=>{
-                // console.log(`${this.name} 님이 걷습니다`);  //()=>{}'s this : 탄생시점을기준(렉시컬)
+                console.log(`${this.name} 님이 걷습니다`);  //()=>{}'s this : 탄생시점을기준(렉시컬)
                 console.log(this);
             }
         }
@@ -96,15 +96,15 @@
         a.walk();
 
 
-        // const f1 = () => {
-        //     console.log('f1...', this);  // 상위스코프(window객체) 의 'this' 를 가져옴
-        // }
-        // f1();
+        const f1 = () => {
+            console.log('f1...', this);  // 상위스코프(window객체) 의 'this' 를 가져옴
+        }
+        f1();
 
-        // function f2() {
-        //     console.log("f2...", this);  // 호출 방법에 따라 this가 달라짐
-        // }
-        // f2();      
+        function f2() {
+            console.log("f2...", this);  // 호출 방법에 따라 this가 달라짐
+        }
+        f2();       -->
     </script>
 
 </body>
