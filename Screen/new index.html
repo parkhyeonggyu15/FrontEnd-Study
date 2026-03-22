@@ -95,9 +95,14 @@
         }
 
         /* Layout-main */
-        .wrapper>main {}
+        .wrapper>main {
+             display: flex;
+             gap: 2rem;
+             max-width: 1281px;
+        }
 
         .wrapper>main>.content {
+            flex:1;
             
         }
 
@@ -162,10 +167,11 @@
 
         .wrapper>main>.content>.postheader>.userStats>.stats {
             display: flex;
-            margin-left: 866px;
+            margin-left: auto;
             margin-top: 20px;
             gap: 5px;
             padding-right: 15px;
+            
         }
 
         .wrapper>main>.content>.postheader>.userStats>.stats2 {
@@ -254,7 +260,11 @@
             height: 44px;
             
         }
-        .wrapper>main>.content>.commentinput>button{
+        .wrapper>main>.content>.commentinput>.inputbutton{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .wrapper>main>.content>.commentinput>.inputbutton>button{
             border-radius: 50px;
             background-color: black;
             color: white;
@@ -264,7 +274,159 @@
             width: 130px;
             font-weight: 700;
             font-size: 16px;
+            cursor: pointer;
         }
+        .wrapper>main>.sidebar{
+            display: flex;
+            width: 380px;
+            
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar{
+            position: sticky;
+            top: 0%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 0%;
+            align-self: flex-start;
+            
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard{
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.card-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 20px;
+            
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.card-content>div{
+            display: flex;
+            flex-direction: column;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.card-content>div>span{
+            font-size: 13px;
+            font-weight: 600;
+            color: #6b7280;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.card-content>div>.value{
+            font-size: 15px;
+            font-weight: 500;
+            color: #1f2937;
+            line-height: 1.4;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>button{
+            width: 350px;
+            padding: 12px 16px;
+            background: #81e1cf;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+         .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.justline{
+            height: 1px;
+            background-color: #f2f2f2;
+            width: 350px;
+            margin: 0% auto;
+         }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.card-content>div>img{
+            width: 24px;
+            height: 24px;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile{}
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileinfo{
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+            
+            padding-top: 20px;
+            
+            
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileinfo>div>.firstline{
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileinfo>div>.secondline{
+            font-size: 13px;
+            color: #717171;
+            
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileinfo>img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileskill{
+            padding: 15px;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileskill>.skill{
+            display: flex;
+            gap: 4px;
+       
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileskill>span{  
+            font-size: 12px;
+            font-weight: 600;
+            color: #6b7280;
+            padding: 5px;
+           
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileskill>.skill>.firstskill{
+            display: flex;
+            font-size: 11px;
+            color: #555;
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 10px;
+            justify-content: center;
+        }
+        
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile>.profileskill>.skill>.secondskill{
+            display: flex;
+            font-size: 11px;
+            color: #555;
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 10px;
+            justify-content: center;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile{}
+        .wrapper>main>.sidebar>.sticky-sidebar>.maincard>.profile{}
+        .wrapper>main>.sidebar>.sticky-sidebar>.bottomcard{
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+        .wrapper>main>.sidebar>.sticky-sidebar>.bottomcard>span{
+            font-weight: 600;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.bottomcard>ul{
+            padding: 0%;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar>.bottomcard>ul>li{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            color: #555;
+            transition: color .15s;
+        }
+        .wrapper>main>.sidebar>.sticky-sidebar{}
         /* Layout-footer */
         .wrapper>footer {}
     </style>
@@ -276,7 +438,7 @@
             <div class="top-header"></div>
             <nav>
                 <div class="nav-bar ">
-                    <img src="file:///C:/Users/Administrator/Downloads/ALLA%20%EB%A1%9C%EA%B3%A0.svg" alt="logo">
+                    <img src="./ALLA 로고.svg" alt="logo">
                     <div class="sub-title">Alla-IT</div>
                 </div>
                 <div class="sub-manu">
@@ -288,8 +450,8 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <section class="content layout-1281">
+        <main class="layout-1281">
+            <section class="content ">
                 <div class="postheader">
                     <img src="https://holaworld.io/images/info/arrow-left.png" alt="">
                     <div class="title">[카페모카] 커피한잔하고 코딩 해요☕️</div>
@@ -301,7 +463,7 @@
                         </div>
                         <div class="stats">
                             <img src="https://holaworld.io/images/info/eye.png" alt="">
-                            <div>165</div>
+                            <div>503</div>
                         </div>
                         <div class="stats2">
                             <img src="https://holaworld.io/images/info/bookmark.png" alt="">
@@ -352,10 +514,89 @@
                         <img src="https://hola-post-image.s3.ap-northeast-2.amazonaws.com/default.PNG" alt="">
                         <textarea class="input" placeholder="댓글을 입력하세요."></textarea>
                     </div>
-                    <button>댓글 등록</button>
+                    <div class="inputbutton">
+                        <button>댓글 등록</button>
+                    </div>
                 </div>
             </section>
-            <section></section>
+            <section class="sidebar">
+                    <div class="sticky-sidebar">
+                        <div class="maincard">
+                            <div class="card-content">
+                                <div>
+                                    <span>모집 구분</span>
+                                    <span class="value">스터디</span>
+                                </div>
+                                <div>
+                                    <span>진행 방식</span>
+                                    <span class="value">온라인</span>
+                                </div>
+                                <div>
+                                    <span>모집 인원</span>
+                                    <span class="value">4명</span>
+                                </div>
+                                <div>
+                                    <span>시작 예정</span>
+                                    <span class="value">2026.03.16</span>
+                                </div>
+                                <div>
+                                    <span>연락 방법</span>
+                                    <span class="value">구글폼</span>
+                                </div>
+                                <div>
+                                    <span>예상 기간</span>
+                                    <span class="value">기간 미정</span>
+                                </div>
+                                <div>
+                                    <span>모집 분야</span>
+                                    <span class="value">스터디</span>
+                                </div>
+                                <div>
+                                    <span>사용 언어</span>
+                                    <img src="https://holaworld.io/images/languages/javascript.png" alt="">
+                                </div>
+                            </div>
+                            <button>지원하기</button>
+                            <div class="justline"></div>
+                            <div class="profile">
+                                <div class="profileinfo">
+                                    <img src="https://hola-post-image.s3.ap-northeast-2.amazonaws.com/default.PNG" alt="">
+                                    <div>
+                                        <div class="firstline">뭐라도해야지</div>
+                                        <div class="secondline">프론트엔드 개발자 1년차</div>
+                                    </div>
+                                </div>
+                                    <div class="profileskill">
+                                        <span>관심 분야</span>
+                                        <div class="skill">
+                                            <div class="firstskill">javascript</div>
+                                            <div class="secondskill">CSS</div>
+                                        </div>
+                                    </div>
+                                
+                                <div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottomcard">
+                            <span>사용자</span>님께 추천하는 글
+                            <ul>
+                                <li>🚀팀으로 기획→디자인→개발→배포까지 완주하는 실무형 사이드 프로젝트, 스위프 웹 13기🚀</li>
+                                <li>🚀팀으로 기획→디자인→개발→배포까지 완주하는 실무형 사이드 프로젝트, 스위프 웹 13기🚀</li>
+                                <li>[백엔드 개발자] IT 동아리 젝트 백엔드 개발자(메이커스 팀) 모집</li>
+                                <li>🐶 [FE/BE 충원] [MVP 배포 임박 · 실서비스 운영 경험] 8년 차 빅테크 BE와 함께하는 반려견 플랫폼</li>
+                                <li>[SKT 출신 개발자] UI/UX 디자이너 협업 구합니다 (외주 + 프로젝트)</li>
+                                <li>AI Agent 기반 오픈소스 기여 도우미 프로젝트 </li>
+                                <li>[디자이너 모집] 하나 청년 금융인재 양성 프로젝트 팀원 구합니다.</li>
+                                <li>프리랜서를 위한 AI 상담 보조 서비스 초기 개발</li>
+                                <li>음악 AI 스타트업, 함께 만들어갈 개발자를 찾습니다</li>
+                                <li>'글로벌 마인드 ≫ 현실' 사이드 프로젝트 팀원 모집</li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
             <section></section>
         </main>
         <footer></footer>
