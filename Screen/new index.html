@@ -19,6 +19,10 @@
             width: 1281px;
             margin: 0 auto;
         }
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
         .wrapper>header>nav {
             width: 100%;
             display: flex;
@@ -27,7 +31,8 @@
             align-items: center;
             padding: 0 20px;
             max-width: 1281px;
-            margin: 0 auto
+            margin: 0 auto;
+            flex-wrap: wrap;
         }
         .wrapper>header>nav>.nav-bar>img {
             width: 61px;
@@ -86,6 +91,7 @@
              display: flex;
              gap: 2rem;
              max-width: 1281px;
+             
         }
         .wrapper>main>.content {
             flex:1;
@@ -115,6 +121,7 @@
         .wrapper>main>.content>.postheader>.userStats {
             padding-top: 20px;
             display: flex;
+            flex-wrap: wrap;
         }
         .wrapper>main>.content>.postheader>.userStats>.user {
             display: flex;
@@ -388,6 +395,13 @@
         .wrapper>main>.sidebar>.sticky-sidebar{}
         /* Layout-footer */
         .wrapper>footer {}
+        
+        @media all and (max-width:480px){
+            .box {
+                width: 100%;
+               
+            }
+        }
     </style>
 </head>
 
