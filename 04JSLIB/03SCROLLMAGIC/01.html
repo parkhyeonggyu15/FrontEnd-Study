@@ -40,14 +40,11 @@
             left: calc(100% - 100px);
             top: calc(100% - 100px);
 
-            animation-name: ball;
-            animation-iteration-count: infinite;
-            animation-duration: 1s;
+            transform: rotate(180deg);background-color: black;color: white;
+            transition: 2s;
+
         }
-        @keyframes ball {
-            0%{transform: rotate(0deg);background-color: white;color: black;}
-            100%{transform: rotate(180deg);background-color: black;color: white;}
-        }
+
     </style>
 </head>
 
