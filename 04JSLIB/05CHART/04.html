@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./경찰정지역별범죄발생건수.js"> </script>
+</head>
+
+<body style="display: flex; justify-content:center; align-items: center; height: 100vh;">
+
+    <div style="width:800px;height: 500px;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // console.log(지역별범죄건수);
+
+        const result =
+            지역별범죄건수.reduce((resultObject, item) => {
+                const { 범죄대분류, 범죄중분류, ...rest } = item;
+                const values = Object.values(rest);
+                const item_sum = values.reduce((sum, count) => { return sum + count; }, 0);
+
+                // console.log(범죄대분류,item_sum);
+                // return {범죄대분류,item_sum}
+                if (resultObject[범죄대분류] !== undefined) {
+                    resultObject[범죄대분류] += item_sum;
+                } else {
+                    //처음 누적
+                    resultObject[범죄대분류] = item_sum;
+                }
+                return resultObject;
+            }, {})
+
+        console.log(result);
+
+        //차트구현
+        const ctx = document.getElementById('myChart');
+        const options = {
+            animation: {
+                delay: (el) => { return el.dataIndex * 100; }
+            },
+            scales: {
+                x: {
+                    stacked: true,
+
+                },
+                y: {
+                    beginAtZero: true
+                    // min : 0,
+                    // max : 100,
+                    // ticks : {
+                    //     stepSize : 10,
+                    // }
+                },
+            },
+            onClick: (e, chartEl) => {
+
+            }
+
+        }
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(result),
+                datasets: [{
+                    label: '지역별범죄건수',
+                    data: Object.values(result),
+                    borderWidth: 1,
+                    backgroundColor: ['red', 'orange','blue']
+                }]
+            },
+            options: options
+        });
+    </script>
+</body>
+
+</html>
