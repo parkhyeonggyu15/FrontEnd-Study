@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<!-- Mobile 화면 : Viewport 설정 -->
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="robots" content="noindex">
+	<meta name="format-detection" content="telephone=no">
+	<!--STEP 1: CSS 추가하기 -->
+	<!--CDN 방식 -->
+	<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"/>-->
+	<!-- Download 방식 -->
+	<link rel="stylesheet" href="css/leaflet@1.3.3/leaflet.css" />
+	<!--STEP 3: 지도 영역 관련 CSS 추가하기 -->
+	<link rel="stylesheet" href="css/main.css" />
+	<!--STEP 2: JS 추가하기 -->
+	<!--CDN 방식 -->
+	<!--<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>-->
+	<!-- Download 방식 -->
+	<script src="js/leaflet@1.3.3/leaflet.js"></script>
+	<!-- Leaflet Plugins: Leaflet.KoreanTmsProviders 추가  -->
+	<script src="js/KoreanTmsProviders/lib/proj4.js"></script>
+	<script src="js/KoreanTmsProviders/lib/proj4leaflet.js"></script>
+	<script src="js/KoreanTmsProviders/src/Leaflet.KoreanTmsProviders.js"></script>
+</head>
+
+<body>
+	<!-- 배경지도 영역 추가하기-->
+	<div id="map" class="map"></div>
+	<script>
+		// -----------------------------------------
+		// 지도 생성 + 타일설정
+		// -----------------------------------------
+		var map = new L.Map('map', {
+			center: new L.LatLng(35.8714, 128.6014), //중심점 : 대구광역시청 위경도 좌표
+			zoom: 0.5,	//Leaflet.KoreanTmsProviders.js : resolutions기준 줌 레벨(Level 12)
+			crs: L.Proj.CRS.Daum, //Leaflet.KoreanTmsProviders.js : 새로 정의된 Daum Map CRS
+			worldCopyJump: false,  //https://leafletjs.com/reference-1.3.2.html#map-worldcopyjump 참조    
+		});
+		var baseLayers = L.tileLayer.koreaProvider('DaumMap.Street').addTo(map);
+		// -----------------------------------------
+		// 중심좌표 마커 생성
+		// -----------------------------------------
+		var centerMarker = L.marker([35.8714, 128.6014]).addTo(map);
+		centerMarker.bindPopup("<p><h2>대구광역시청</h2></p>").openPopup();
+		
+		// 커스텀 마커 ICON
+		var customIcon = L.icon({
+			iconUrl: './img/customMarker.png',
+			iconSize: [48, 48],
+			iconAnchor: [25, 0],
+			// popupAnchor: [-3, -76],
+			// shadowUrl: 'my-icon-shadow.png',
+			// shadowSize: [68, 95],
+			// shadowAnchor: [22, 94]
+		});
+
+		// 커스텀 마커 생성
+		var customMarker = L.marker([35.872678, 128.600630], { icon: customIcon }).addTo(map);
+
+		// 커스텀 마커 팝업창 내용
+		const customPopupContents = 
+			`<div style='width:150px;height:30px;'>
+				<h2>[중식점] 만리장성</h2>
+			</div>
+			`;
+		// 커스텀 마커 팝업창 내용 등록
+		customMarker.bindPopup(customPopupContents);
+		customMarker.on('mouseover',(e)=>{console.log(e),customMarker.openPopup();});
+		customMarker.on('mouseout',(e)=>{console.log(e),customMarker.closePopup();});
+		customMarker.on('mouseclick',(e)=>{console.log(e),customMarker.openPopup();});
+	</script>
+</body>
+
+</html>
