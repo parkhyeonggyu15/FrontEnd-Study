@@ -102,7 +102,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="시퀀스 다이어그램" id="iZIF-IJHYp8xIzG7uwkX">
-    <mxGraphModel dx="2878" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+    <mxGraphModel dx="3237" dy="1213" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
         <mxCell id="iygVSI8sf9GSKHrVxj52-0" />
         <mxCell id="iygVSI8sf9GSKHrVxj52-1" parent="iygVSI8sf9GSKHrVxj52-0" />
@@ -553,7 +553,7 @@
             <mxRectangle height="230" width="450" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sWt-iNseseqtOCHnCTlj-0" parent="iygVSI8sf9GSKHrVxj52-1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" value="BN API DOCUMENT(SPRINGBOOT 3.X)" vertex="1">
+        <mxCell id="sWt-iNseseqtOCHnCTlj-0" parent="iygVSI8sf9GSKHrVxj52-1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" value="BN API DOCUMENT(SPRINGBOOT 3.X) - 결제 (박형규)" vertex="1">
           <mxGeometry height="190" width="1700" x="1880" y="440" as="geometry" />
         </mxCell>
         <mxCell id="sWt-iNseseqtOCHnCTlj-1" parent="sWt-iNseseqtOCHnCTlj-0" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
@@ -662,7 +662,7 @@
             <mxRectangle height="128" width="220" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sWt-iNseseqtOCHnCTlj-23" parent="iygVSI8sf9GSKHrVxj52-1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f8cecc;strokeColor=#b85450;align=left;" value="FN API DOCUMENT(REACTJS)" vertex="1">
+        <mxCell id="sWt-iNseseqtOCHnCTlj-23" parent="iygVSI8sf9GSKHrVxj52-1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f8cecc;strokeColor=#b85450;align=left;" value="FN API DOCUMENT(REACTJS) - 결제 (박형규)" vertex="1">
           <mxGeometry height="170" width="1700" x="1880" y="680" as="geometry" />
         </mxCell>
         <mxCell id="sWt-iNseseqtOCHnCTlj-24" parent="sWt-iNseseqtOCHnCTlj-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
